@@ -1,0 +1,27 @@
+<h1>Hola desde Kirena</h1>
+<p>{{titulo}}</p>
+<p>{{productos | json}}</p>
+<table> border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Imagen</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let prod of productos">
+        <td>{{prod.nombre}}</td>
+        <td>{{prod.precio}}</td>
+        <td>{{prod.stock}}</td>
+        <td>
+            <img [src]="prod.imagen" [alt]="" width="100px">
+        </td>
+        <td>
+            <button>X</button>
+        </td>
+    </tr>
+  </tbody>
+</table>

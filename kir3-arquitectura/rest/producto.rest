@@ -1,0 +1,32 @@
+###Listar P
+GET http://127.0.0.1:3000/producto
+
+###G P
+POST http://127.0.0.1:3000/producto
+Content-Type: application/json
+
+{
+    "imagen":"Foto.jpg",
+    "nombre":"Round Lab Birch Juice Moisturizing Cream",
+    "descripcion":"Una crema ligera en gel-crema enriquecida con savia de abedul de Inje y ácido hialurónico. Ofrece una ráfaga de hidratación que dura todo el día sin dejar sensación grasosa, ideal para todo tipo de piel.",
+    "precio":22.00,
+    "cantidad":9
+}
+
+###Mostrar P
+GET http://127.0.0.1:3000/producto/90
+
+###Modificar P
+PUT http://127.0.0.1:3000/producto/120
+Content-Type: application/json
+
+{
+    "imagen":"Foto.jpg",
+    "nombre":"Tonico de centella asiatica",
+    "descripcion":"Tonico que ayuda a mejorar la textura yy apariencia de la piel",
+    "precio":30.00,
+    "cantidad": 15
+}
+
+###E P
+DELETE http://127.0.0.1:3000/producto/120

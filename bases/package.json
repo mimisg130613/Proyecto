@@ -1,0 +1,22 @@
+{
+  "name": "bases",
+  "version": "1.0.0",
+  "description": "Entendiendo NodeJS",
+  "keywords": [
+    "npm"
+  ],
+  "license": "MIT",
+  "author": "Noemi Soria",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "node src/index.js",
+    "comando": "npm run dev",
+    "start": "node src/index.js",
+    "start:dev": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
