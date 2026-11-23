@@ -1,0 +1,24 @@
+import {config} from "dotenv"
+import { DataSource } from "typeorm";
+
+const env= process.env.NODE_ENV || 'development'
+
+config({
+    override: true,
+    path: `.env.${env}`,
+    debug:true //para validar que se está modificando
+})
+
+export default new DataSource({
+    type:'postgres',
+    host:'localhost',
+    port:5432,    
+    username: 'postgres',
+    password: '12345',
+    database: 'back_nest_angular',
+    entities: [
+    './src/modules/**/*.entity.ts',
+    './src/**/*.entity.ts'
+    ],
+    migrations: ['./src/database/migrations/*.ts'],
+});
